@@ -7,6 +7,7 @@ This guide is how I chose to set up my Pi with Raspberry Pi OS, Wi-Fi, SSH, VNC 
 1. [Flashing Operating System](#Flashing-OS)
 2. [First Time Login](#First-Login)
 3. [Remote Access - VNC](#Remote-Access-With-VNC)
+4. [Updating OS](#Updating-The-Pi-OS)
 
 ----------------------------------------------------------------
 
@@ -34,7 +35,7 @@ The Wi-Fi settings are found in the top right.
 
 ----------------------------------------------------------------
 
-# Remote-Access-With-VNC
+# 3. Remote-Access-With-VNC
 To connect to the Pi using [VNC](https://www.realvnc.com/en/) you will need its ip address. I chose to connect mine directly to my router to connect it to my local network. One method of finding it is logging into your router. 
 
 Another method is connecting to your Pi using SSH, which now comes with Windows 10. The command to connect to the Pi from your Windows desktop is `ssh pi@raspberrypi.local` if you are using the default username and hostname as mentioned above.
@@ -54,7 +55,7 @@ Click `ctrl-x` and then click `y` to save changes. Reboot the Pi.
 
 ----------------------------------------------------------------
 
-# Updating-The-Pi
+# 4. Updating-The-Pi-OS
 To make sure everything is up to date run.
 
 ```
