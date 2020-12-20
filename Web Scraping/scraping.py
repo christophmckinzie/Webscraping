@@ -1,4 +1,4 @@
-# I hope was to scrape the weather forecasts for a handful of cities along the route to my parents house to see if I would be hitting any snow along my route. 
+# My hope was to scrape the weather forecasts for a handful of cities along the route to my parents house to see if I would be hitting any snow along my route. 
 # I decided this was not the best course of action for this task. My Weather-On-Route repository has an API based approach and works decently well.
 
 import requests
