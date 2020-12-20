@@ -11,14 +11,14 @@ This guide is how I chose to set up my Pi with Raspberry Pi OS, Wi-Fi, SSH, VNC 
 
 ----------------------------------------------------------------
 
-# 1. Flashing-OS
+# Flashing-OS
 Firstly, you need to download the image file of the operating system. I am using [Raspberry Pi OS](https://www.raspberrypi.org/software/operating-systems/). This file is an image file which needs to be written onto a SD card.
 
 To do this you can use [Balenaetcher](https://www.balena.io/etcher/) or Win32DiskImager. You need to be VERY careful about choosing the right drive to flash the image file to. Choosing your PCs local disk will delete everything and put the OS on it. 
 
 ----------------------------------------------------------------
 
-# 2. First-Login
+# First-Login
 The newer OS versions have SSH and and VNC disabled by default for security reasons. There are methods to enable it where you place an empty file named ssh (no extension) in the root of the boot disk, but I chose to plug into a montinor and keyboard for the first login to enable these. The default hostname, username and password are:
 
 ```
@@ -35,7 +35,7 @@ The Wi-Fi settings are found in the top right.
 
 ----------------------------------------------------------------
 
-# 3. Remote-Access-With-VNC
+# Remote-Access-With-VNC
 To connect to the Pi using [VNC](https://www.realvnc.com/en/) you will need its ip address. I chose to connect mine directly to my router to connect it to my local network. One method of finding it is logging into your router. 
 
 Another method is connecting to your Pi using SSH, which now comes with Windows 10. The command to connect to the Pi from your Windows desktop is `ssh pi@raspberrypi.local` if you are using the default username and hostname as mentioned above.
@@ -55,7 +55,7 @@ Click `ctrl-x` and then click `y` to save changes. Reboot the Pi.
 
 ----------------------------------------------------------------
 
-# 4. Updating-The-Pi-OS
+# Updating-The-Pi-OS
 To make sure everything is up to date run.
 
 ```
