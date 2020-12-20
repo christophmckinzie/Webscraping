@@ -63,5 +63,5 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 ```
 
-At this point its ready for whatever you wanna do with it.
+At this point its ready for whatever you wanna do with it. The Web Scraping folder README has the steps to install a MySQL server and packages to do some webscraping with Python. 
 
