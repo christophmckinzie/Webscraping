@@ -9,7 +9,7 @@ mariadb = mysql.connector.connect(
   host='HOSTNAME',
   user='USERNAME',
   passwd='PASSWORD',
-  database='DATABASE'
+  database='DATABASENAME'
 )
   
 mycursor = mariadb.cursor()
@@ -26,6 +26,7 @@ month = date.datetime.today().strftime('%m')
 year = date.datetime.today().strftime('%Y')
 
 for i in results:
+  
   day = i.find('h2', {data-testid':'daypartName'}).text.strip()
   
   if not re.finall(r'[0-9]+', day):
@@ -34,4 +35,16 @@ for i in results:
     day = re.finall(r'[0-9]+', day)[0]
     
   day_final = month + '/' + day + '/' + year
-  temp_max = i.find('span, {}
+  temp_max = i.find('span', {'class':'DetailsSummary--highTempValue--3x6cL'}).text.strip()
+  temp_min = i.find('span', {'class':'DetailsSummary--lowTempValue--1DlJK'}).text.strip()
+  precip = i.find('span', {'data-testid':'PercentageValue'}).text.strip()                    
+  weather_type = i.find('span', {'class':'DetailsSummary--extendedData--aaFeV'}).text.strip()                    
+
+  # column names here should correspond to the column names of the table columns                     
+  insert_into_db = 'INSERT INTO TABLENAME(COLUMN1, COLUMN2, ......) VALUES (%s, %s, ......)'
+  
+  vals = (day_final, temp_max, temp_min, precip, weather_type)
+                      
+  mycursor.execute(insert_into_db, vals)
+  # I am unsure why but my database is requiring me to add a COMMIT command to save the inserted row
+  mycursor.execute('COMMIT')                    
