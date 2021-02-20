@@ -36,11 +36,11 @@ The Wi-Fi settings are found in the top right.
 ----------------------------------------------------------------
 
 # Remote-Access-With-VNC
-To connect to the Pi using [VNC](https://www.realvnc.com/en/) you will need its ip address. I chose to connect mine directly to my router to connect it to my local network. One method of finding it is logging into your router. 
+To connect to the Pi using [VNC](https://www.realvnc.com/en/) you will need its ip address. I chose to connect mine directly to my router to connect it to my local network. One method of finding it is logging into your router.
 
-Another method is connecting to your Pi using SSH, which now comes with Windows 10. The command to connect to the Pi from your Windows desktop is `ssh pi@raspberrypi.local` if you are using the default username and hostname as mentioned above.
+Another method is connecting to your Pi using SSH, which now comes with Windows 10. The command to connect to the Pi from your Windows desktop is `ssh pi@raspberrypi.local` if you are using the default username and hostname as mentioned above. You may also opt to use the IP address of the Pi as follows: `ssh pi@IP_ADDRESS_OF_RASPBERRYPI`, once you have found the IP address. 
 
-Once connected, use the command `ifconfig -a` to get the ip address. For me there is two because I enabled Wi-Fi and am wired as well. 
+Once connected, use the command `ifconfig -a` to get the ip address. For me there are two because I enabled Wi-Fi and am wired as well. 
 
 Exit the SSH terminal using the `exit` command. 
 
