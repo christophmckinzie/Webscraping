@@ -1,3 +1,7 @@
+# I really like these pants
+# I made a crontab job so run this script every morning at 8am. 
+# 00 8 * * * cd /directory/to/script/ && python script.py 
+
 import requests
 from bs4 import BeautifulSoup
 import datetime as date
