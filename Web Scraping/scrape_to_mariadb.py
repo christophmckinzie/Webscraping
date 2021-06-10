@@ -49,5 +49,4 @@ for i in results:
   vals = (day_final, temp_max, temp_min, precip, weather_type)
                       
   mycursor.execute(insert_into_db, vals)
-  # I am unsure why but my database is requiring me to add a COMMIT command to save the inserted row
   mycursor.execute('COMMIT')                    
